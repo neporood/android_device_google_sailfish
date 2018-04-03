@@ -2,21 +2,17 @@
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common FireHound stuff.
-$(call inherit-product, vendor/fh/config/common_full_phone.mk)
+# Inherit some common AOKP stuff.
+$(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/marlin/aosp_sailfish.mk)
-$(call inherit-product, vendor/nepo/my-apps.mk)
-
-# Disable FH Prebuilts
-DISABLE_CNM := true
-DISABLE_CWB := true
+#$(call inherit-product, vendor/nepo/my-apps.mk)
 
 -include device/google/marlin/sailfish/device-lineage.mk
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := fh_sailfish
+PRODUCT_NAME := aokp_sailfish
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel
 TARGET_MANUFACTURER := HTC
